@@ -566,7 +566,7 @@ public class JalkTimerService extends Service {
                 .setContentText("Select next action")
                 .setStyle(new NotificationCompat.BigTextStyle().bigText("Jog · Walk · Rest"))
                 .setCategory(NotificationCompat.CATEGORY_ALARM)
-                .setPriority(NotificationCompat.PRIORITY_HIGH)
+                .setPriority(NotificationCompat.PRIORITY_MAX)
                 .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
                 .setOngoing(false)
                 .setAutoCancel(false);
