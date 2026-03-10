@@ -867,10 +867,12 @@ public class JalkTimerService extends Service {
     private void stopAlerts() {
         cancelAlertNotification();
         try {
-            if (ringtone != null && ringtone.isPlaying()) {
+            if (ringtone != null) {
                 ringtone.stop();
             }
         } catch (Throwable ignored) {
+        } finally {
+            ringtone = null;
         }
         try {
             if (vibrator != null) {
