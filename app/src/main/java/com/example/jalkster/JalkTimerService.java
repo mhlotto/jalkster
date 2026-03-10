@@ -177,6 +177,12 @@ public class JalkTimerService extends Service {
             dispatchEvent(new LiveSessionEvent.TapStop());
         } else if (TimerContract.ACTION_REQUEST_STATE.equals(action)) {
             Log.d(TAG, "Received ACTION_REQUEST_STATE");
+            if (hasLiveSessionInMemory()) {
+                broadcastState();
+                persistSessionState();
+                updateNotification();
+                return START_STICKY;
+            }
             boolean restored = restoreSessionState();
             if (!restored && sessionState == null) {
                 sessionState = LiveSessionState.initial(
@@ -218,6 +224,15 @@ public class JalkTimerService extends Service {
             updateNotification();
         }
         return START_STICKY;
+    }
+
+    private boolean hasLiveSessionInMemory() {
+        if (sessionState == null || sessionState.getMode() == LiveMode.STOPPED) {
+            return false;
+        }
+        return hasSessionStarted
+                || sessionState.getMode() != LiveMode.INIT
+                || sessionState.getCurrentAct() != null;
     }
 
     @Nullable
