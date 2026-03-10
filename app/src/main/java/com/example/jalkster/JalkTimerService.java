@@ -65,7 +65,7 @@ public class JalkTimerService extends Service {
 
     // Channel IDs
     private static final String CHANNEL_STATUS = "jalk_timer_status";
-    private static final String CHANNEL_ALERT_SOUND = "jalk_timer_alert_sound";
+    private static final String CHANNEL_ALERT_MANUAL_SOUND = "jalk_timer_alert_manual_sound";
     private static final String CHANNEL_ALERT_VIB = "jalk_timer_alert_vibrate";
 
     public static final String ACTION_PAUSE = "com.example.jalkster.ACTION_PAUSE";
@@ -558,7 +558,7 @@ public class JalkTimerService extends Service {
         SharedPreferences prefs = getSharedPreferences(TimerPreferences.PREFS_NAME, MODE_PRIVATE);
         boolean vibrateOnly = prefs.getBoolean(TimerPreferences.KEY_VIBRATE_ONLY, false);
 
-        String channelId = vibrateOnly ? CHANNEL_ALERT_VIB : CHANNEL_ALERT_SOUND;
+        String channelId = vibrateOnly ? CHANNEL_ALERT_VIB : CHANNEL_ALERT_MANUAL_SOUND;
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this, channelId)
                 .setSmallIcon(android.R.drawable.ic_dialog_info)
@@ -613,11 +613,19 @@ public class JalkTimerService extends Service {
         }
 
         if (!vibrateOnly) {
-            if (ringtone == null) {
-                Uri uri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM);
-                ringtone = RingtoneManager.getRingtone(getApplicationContext(), uri);
+            try {
+                if (ringtone != null && ringtone.isPlaying()) {
+                    ringtone.stop();
+                }
+            } catch (Throwable ignored) {
             }
-            if (ringtone != null && !ringtone.isPlaying()) {
+
+            Uri uri = SoundPreferenceManager.getSelectedSoundUri(this);
+            if (uri == null) {
+                uri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM);
+            }
+            ringtone = RingtoneManager.getRingtone(getApplicationContext(), uri);
+            if (ringtone != null) {
                 ringtone.play();
             }
         }

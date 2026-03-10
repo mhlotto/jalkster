@@ -94,6 +94,7 @@ public class JalkMainActivity extends AppCompatActivity {
             Uri pickedUri = data.getParcelableExtra(RingtoneManager.EXTRA_RINGTONE_PICKED_URI);
             if (pickedUri != null) {
                 SoundPreferenceManager.saveSelectedSoundUri(this, pickedUri);
+                NotificationUtils.createNotificationChannels(this);
             } else {
                 Toast.makeText(this, R.string.timer_sound_not_selected, Toast.LENGTH_SHORT).show();
             }
