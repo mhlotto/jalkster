@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/text_xc_ski_title"
+        style="@style/Jalkster.TextView.Heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/xc_ski_session_title"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:paddingBottom="24dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_start_xc_ski"
+        style="@style/Jalkster.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/start_xc_ski"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:padding="16dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_back"
+        style="@style/Jalkster.Button.Outlined"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/back_label"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:padding="16dp" />
+
+</LinearLayout>

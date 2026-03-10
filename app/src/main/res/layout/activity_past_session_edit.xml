@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Jalkster.CardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layout_walk_rep_time"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:hint="@string/hint_walk_rep_time_seconds">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_walk_rep_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:selectAllOnFocus="true" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layout_jog_rep_time"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:hint="@string/hint_jog_rep_time_seconds">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_jog_rep_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:selectAllOnFocus="true" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layout_rest_rep_time"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:hint="@string/hint_rest_rep_time_seconds">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_rest_rep_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:selectAllOnFocus="true" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layout_walk_reps_done"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:hint="@string/hint_walk_reps_done">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_walk_reps_done"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:selectAllOnFocus="true" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layout_jog_reps_done"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:hint="@string/hint_jog_reps_done">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_jog_reps_done"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:selectAllOnFocus="true" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layout_rest_reps_done"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:hint="@string/hint_rest_reps_done">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_rest_reps_done"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:selectAllOnFocus="true" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_xc_ski_duration_row"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_xc_ski_duration_minutes"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:hint="@string/hint_xc_ski_duration_minutes">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edit_xc_ski_duration_minutes"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:selectAllOnFocus="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_xc_ski_duration_seconds"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:hint="@string/hint_xc_ski_duration_seconds">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edit_xc_ski_duration_seconds"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:selectAllOnFocus="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/button_save"
+                        style="@style/Widget.MaterialComponents.Button"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:text="@string/action_save"
+                        android:textAllCaps="false" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/button_cancel"
+                        style="@style/Widget.MaterialComponents.Button"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:text="@string/action_cancel"
+                        android:textAllCaps="false" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_new_jalk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        style="@style/Jalkster.Button"
+        android:text="@string/new_jalk_session"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:padding="16dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_new_xc_ski"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        style="@style/Jalkster.Button"
+        android:text="@string/new_xc_ski_session"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:padding="16dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_review_past"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        style="@style/Jalkster.Button"
+        android:text="@string/review_past_sessions"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:padding="16dp" />
+
+<com.google.android.material.button.MaterialButton
+    android:id="@+id/statsButton"
+    style="@style/Jalkster.Button"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"   
+    android:text="@string/stats_label"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:padding="16dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_set_sound"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        style="@style/Jalkster.Button"
+        android:text="@string/set_timer_sound_label"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:padding="16dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_exit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Jalkster.Button.Outlined"
+        android:text="@string/exit_label"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:padding="16dp" />
+
+</LinearLayout>

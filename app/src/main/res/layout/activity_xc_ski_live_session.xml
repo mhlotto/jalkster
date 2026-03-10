@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/text_xc_ski_label"
+        style="@style/Jalkster.TextView.Heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/xc_ski_label"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:paddingBottom="12dp" />
+
+    <TextView
+        android:id="@+id/text_xc_ski_timer"
+        style="@style/Jalkster.TextView.Heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="00:00"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        android:paddingBottom="32dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_pause_resume"
+        style="@style/Jalkster.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/pause_label"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:padding="16dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_stop"
+        style="@style/Jalkster.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/stop_label"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:padding="16dp" />
+
+</LinearLayout>

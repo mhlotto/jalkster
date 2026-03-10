@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/stats_toolbar"
+            style="?attr/toolbarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="?attr/actionBarPopupTheme" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="@color/purple_500"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/lastWeekHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/stats_last_week"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:columnCount="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:layout_columnWeight="1"
+                        android:layout_marginEnd="12dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/stats_sessions"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/lastWeekSessionsValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_columnWeight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/stats_jog_time"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/lastWeekJogTimeValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:layout_columnWeight="1"
+                        android:layout_marginEnd="12dp"
+                        android:layout_row="1"
+                        android:layout_marginTop="12dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/stats_walk_time"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/lastWeekWalkTimeValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_columnWeight="1"
+                        android:layout_row="1"
+                        android:layout_marginTop="12dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/stats_movement_time"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/lastWeekMovementTimeValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:layout_columnWeight="1"
+                        android:layout_row="2"
+                        android:layout_marginTop="12dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/stats_xc_ski_time"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/lastWeekXcSkiTimeValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </GridLayout>
+
+                <com.example.jalkster.ui.ActivityDistributionView
+                    android:id="@+id/distributionLastWeek"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="12dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="@color/purple_500"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/stats_last_prefix"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/rangeSpinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:spinnerMode="dropdown" />
+                </LinearLayout>
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:columnCount="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:layout_columnWeight="1"
+                        android:layout_marginEnd="12dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/stats_sessions"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/customRangeSessionsValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_columnWeight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/stats_jog_time"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/customRangeJogTimeValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:layout_columnWeight="1"
+                        android:layout_marginEnd="12dp"
+                        android:layout_row="1"
+                        android:layout_marginTop="12dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/stats_walk_time"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/customRangeWalkTimeValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_columnWeight="1"
+                        android:layout_row="1"
+                        android:layout_marginTop="12dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/stats_movement_time"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/customRangeMovementTimeValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:layout_columnWeight="1"
+                        android:layout_row="2"
+                        android:layout_marginTop="12dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/stats_xc_ski_time"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/customRangeXcSkiTimeValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </GridLayout>
+
+                <com.example.jalkster.ui.ActivityDistributionView
+                    android:id="@+id/distributionLastRange"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="12dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</ScrollView>

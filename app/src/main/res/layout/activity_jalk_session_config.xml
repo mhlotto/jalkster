@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/label_jog_timer"
+            style="@style/Jalkster.TextView.Heading"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="1"
+            android:labelFor="@id/jog_minutes"
+            android:text="@string/jog_timer_label" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:hint="@string/time_unit_minutes">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/jog_minutes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:selectAllOnFocus="true"
+                    android:maxLength="2"
+                    android:text="01" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/time_unit_seconds">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/jog_seconds"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:selectAllOnFocus="true"
+                    android:maxLength="2"
+                    android:text="00" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/label_walk_timer"
+            style="@style/Jalkster.TextView.Heading"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="1"
+            android:labelFor="@id/walk_minutes"
+            android:text="@string/walk_timer_label" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:hint="@string/time_unit_minutes">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/walk_minutes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:selectAllOnFocus="true"
+                    android:maxLength="2"
+                    android:text="01" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/time_unit_seconds">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/walk_seconds"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:selectAllOnFocus="true"
+                    android:maxLength="2"
+                    android:text="00" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/label_rest_timer"
+            style="@style/Jalkster.TextView.Heading"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="1"
+            android:labelFor="@id/rest_minutes"
+            android:text="@string/rest_timer_label" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:hint="@string/time_unit_minutes">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/rest_minutes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:selectAllOnFocus="true"
+                    android:maxLength="2"
+                    android:text="00" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/time_unit_seconds">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/rest_seconds"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:selectAllOnFocus="true"
+                    android:maxLength="2"
+                    android:text="30" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_start_jalk"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/start_jalk"
+        android:textAllCaps="false"
+        android:textSize="18sp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_cancel"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/action_cancel"
+        android:textAllCaps="false"
+        android:textSize="18sp" />
+
+</LinearLayout>

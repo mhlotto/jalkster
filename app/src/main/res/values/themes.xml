@@ -1,0 +1,14 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Light fallback -->
+    <style name="Theme.Jalkster" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="android:colorBackground">@color/white</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Theme.Jalkster.Splash" parent="Theme.Jalkster">
+        <item name="android:windowBackground">@color/purple_500</item>
+    </style>
+</resources>

@@ -1,10 +1,7 @@
-# internal plan doc
-PLAN*md
 
-# llm stuff
+PLAN*md
 AGENTS.md
 skills/
-codex.resume
 
 # Gradle files
 .gradle/
@@ -47,3 +44,4 @@ google-services.json
 # Ignore Gradle build output directory
 build
 
+codex.resume

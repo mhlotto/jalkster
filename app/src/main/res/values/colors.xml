@@ -1,0 +1,12 @@
+<resources>
+    <color name="purple_200">#BB86FC</color>
+    <color name="purple_500">#6200EE</color>
+    <color name="purple_700">#3700B3</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="card_bg_dark">#1E1B24</color>
+    <color name="jog_accent">#FF8A65</color>
+    <color name="walk_accent">#81C784</color>
+    <color name="rest_accent">#64B5F6</color>
+    <color name="xc_ski_accent">#FFD54F</color>
+</resources>

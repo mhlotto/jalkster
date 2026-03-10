@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                app:cardCornerRadius="16dp"
+                app:cardBackgroundColor="@color/card_bg_dark"
+                app:strokeColor="@color/purple_700"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingBottom="8dp"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:text="@string/label_table_type"
+                            android:textColor="@color/purple_200"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/label_table_rep_duration"
+                            android:textColor="@color/purple_200"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/label_table_num_reps"
+                            android:textColor="@color/purple_200"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/label_table_total"
+                            android:textColor="@color/purple_200"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        app:dividerColor="@color/purple_200" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:orientation="horizontal"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/jog_label"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/text_jog_rep_duration_value"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/text_jog_reps_value"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/text_jog_total_value"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="12dp"
+                        app:dividerColor="@color/purple_700" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:orientation="horizontal"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/walk_label"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/text_walk_rep_duration_value"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/text_walk_reps_value"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/text_walk_total_value"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="12dp"
+                        app:dividerColor="@color/purple_700" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:orientation="horizontal"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/rest_label"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/text_rest_rep_duration_value"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/text_rest_reps_value"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/text_rest_total_value"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                app:cardCornerRadius="16dp"
+                app:cardBackgroundColor="@color/card_bg_dark"
+                app:strokeColor="@color/purple_700"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_session_times"
+                        android:textColor="@color/purple_200"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/label_xc_ski_duration"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/text_xc_ski_duration_value"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/label_start_time"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/text_session_start_value"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/label_end_time"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/text_session_end_value"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingTop="16dp"
+                android:paddingBottom="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_total_movement"
+                    android:textColor="@color/purple_200"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text_total_movement_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@color/purple_200"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <com.example.jalkster.ui.ActivityDistributionView
+                android:id="@+id/activityDistributionView"
+                android:layout_width="220dp"
+                android:layout_height="220dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
